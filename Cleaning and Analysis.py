@@ -12,17 +12,16 @@ cars = pd.read_csv('cars.csv', index_col=0)
 #filling missing data
 fill_lib = { #this library specifies how to fill missing values based on column
     'condition':'unknown',
-    'drive':'unknown',
     'odometer':cars['odometer'].mean(),
     'paint color':'unknown',
-    'type':'unknown',
-    'cylinders':'unknown',
-#    'size':'unknown',
     ' ':'unknown'
 }
-
 cars.fillna(fill_lib, inplace=True) #fill the missing values
 cars = cars.replace(' ', 'unknown') #replace blank space with 'unknown'
+
+#### type ####
+#combing 'pickup' and 'truck' types
+cars['type'] = cars['type'].replace(' pickup', ' truck')
 
 #### price #####
 #convert price column to number
@@ -49,7 +48,9 @@ loc_lib = {
     'langley city':'langley-city',
     'langley township':'langley-township',
     'pitt ':'pitt-',
+    'white ':'white-',
     ',':'',
+    'powell ':'powell-'
     }
 
 location_cleaned = cars['location'].map(lambda x: x.lower())
@@ -138,24 +139,32 @@ cars['model0'] = cars['model'].map(lambda x: x.split(' ')[0])
 cars['model1'] = cars['model'].map(get_second_3_parts)
 cars['model2'] = cars['model'].map(get_third_3_parts)
 
+#fill unknown values in some columns by the mode of the model
+fill_mode_cols = ['type', 'size', 'drive', 'cylinders'] #for these columns we, will replace 'unknown' with the mode of that make of vehicle
+
+def fill_func(x, m):
+    try:
+        fill_val = m.loc[x['model0']].values[0]
+        if type(fill_val) != str: return(x[col])
+        elif pd.isnull(x[col]):return(fill_val)
+        else: return(x[col])
+    except:
+        return(x[col])
+
+for col in fill_mode_cols:
+    modes = cars.groupby('model0')[col].agg([pd.Series.mode])
+    cars[col] = cars.apply(fill_func, args=(modes,), axis=1)
+
+#filling remaining missing data
+fill_lib = { #this library specifies how to fill missing values based on column
+    'drive':'unknown',
+    'type':'unknown',
+    'cylinders':'unknown',
+    'size':'unknown',
+}
+
+cars.fillna(fill_lib, inplace=True) #fill the missing values
+
 #output data
 cars.to_csv('cars_cleaned.csv', index=False)
-
-# =============================================================================
-# #many models have letters at the end of the name but are the same base model, split these letters out into another column
-# mod_letters = [
-#     'se', #sport edition
-#     'sport',
-#     'gt', #grand touring
-#     'lx', #luxury
-#     'hybrid', 
-#     'ex', #extra luxury
-#     'limited', 
-#     'awd', #all wheel drive
-#     'le', 'lt', 'sv', 'xlt', 'gs', 'ev', 'sl', 'tdi', 'ex-l', 'sxt', 
-#     'amg', '4x4', 'ls', 'sl awd', 'xle', 'unlimited', 'sport gt', 'turbo',
-#     'gl', 'preferred', 'platinum', 'signature', 'prime', '4wd'
-#     ] 
-# =============================================================================
-
 

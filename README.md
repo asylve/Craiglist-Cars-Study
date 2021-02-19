@@ -1,6 +1,6 @@
 # Craiglist Cars Study
 
-- Scraped and cleaned ~37,000 Crasigist vehicle listings from southern British Columbia
+- Scraped and cleaned ~37,000 Craiglist vehicle listings from southern British Columbia
 - Trained a gradient boosting model to predict the market price of a listing (MAE $2,300), which can be used to help determine if an asking price is reasonable.
 - Trained a linear model (MAE $6,500) to predict a dollar value for important vehicle features (ie. size, fuel type, manufacturer, odometer, etc.)
 - Graphics:

@@ -1,6 +1,10 @@
 # Craiglist Cars Study
 
-- Model
+- Scraped ~37,000 Crasigist vehicle listings from southern British Columbia
+- Trained a gradient boosting model to predict the market price of a listing (MAE ~$2,300), which can be used to help determine if an asking price is reasonable.
+- Trained a linear model predict a dollar value on the most important vehicle features (ie. size, fuel type, manufacturer, odometer, etc.)
+- Graphics:
+  - Used an interpolation/smoothing teqnique to create contours of average price vs odometer reading and age to evaluate the effect 
 
 # Resources
 

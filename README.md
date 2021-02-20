@@ -6,7 +6,7 @@
 - Graphics:
   - Used an interpolation/smoothing teqnique to create contours of price vs odometer reading and age averaged over the entire region
   - Produced price distributions for most common vehicle models. Found that sellers tend to price vehicles just under round multiples of $10,000, likely as a psychological pricing strategy
-  - Found depretiation time constants for the most common vehicle models and manuacturers (ie. which vehicles 'hold their value' the best: Toyota )
+  - Found depretiation time constants for the most common vehicle models and manuacturers (ie. which vehicles 'hold their value' the best. Toyota won out here)
   - Produced a geographic distribution of vehicle types in the region (found trucks are more prevalent in the suburbs but SUVs are not)
 
 # Resources
@@ -112,14 +112,25 @@ Note that sedan and SUVs sales are more highly concentrated in the urban centres
 
 # 4 Model Building
 
-## 4.1 Lasso with Coefficient Interpretation
+## 4.1 Lasso with Coefficient Interpretation (MAE $6,500)
 
 Lasso is a linear model with an imposed penalty based on the sum of the linear coefficeints. This is useful in dealing with feature co-linearity as some of the coefficents can shrink to zero. The goal for this model was not produce the highest accruacy, but rather produce a set of linear coefficents which can be interpreted as dollar values for a vehicle possessing certain features. 
 
 Only the top 15 most popular brans were considered in this analysis. They are (in order of popuularity): Ford, Toyota, Honda, Chevrolet, Mazda, Nissan, Dodge, BMW, Hyundai, Volkswagen, Mercedes, Kia, Jeep, Audi, and GMC. 
 
-The model results are shown in the plot below, and can be used to get an idea of the value of the given vehicle traits. Values shown are averages over 5 cross-validation data sets repeated 5 times for a total of 25 models. The error bars show the extend of the data with outliers shown as separate dots. Most traits are 'yes/no'. The exceptions are cyilnders ($ per cylinder), age ($ per 5 years), odometer ($ per 25,000 km), and size ($ per step up between: sub-compact, compact, mid-size, full-size)
+The model results are shown in the plot below, and can be used to get an idea of the value of the given vehicle traits. Values shown are averages over 5 cross-validation data sets repeated 5 times for a total of 25 models. The error bars show the extent of the data with outliers shown as separate dots. Most traits are 'yes/no'. The exceptions are cyilnders ($ per cylinder), age ($ per 5 years), odometer ($ per 25,000 km), and size ($ per step up between: sub-compact, compact, mid-size, full-size)
 
 Keep in mind that this linear model is not particularly accurate (MAE $6,500), but it does capture the general trend of the data.
 
 ![](/images/Lasso.png)
+
+
+## 4.2 LightGBM (MAE $2,300)
+
+This tree-based gradient boosting model performed much better than the linear model. Only minor changes to the data were performed before fitting: outliers with a price above $100,000 and odometer above 1,000,000km were droped, and the few rows with missing data were dropped. 
+
+Optimal hyperparameters for the model were found with a cross-validated gridsearch over the entire dataset (sklearn GridSearchCV). Next 20% of the data was held out for validation and training/validation scores were plotted against boosting round iteration. While the training score dropped much lower than the validation score, the validation score at no point started to increase (see below). 
+
+With the hyperparameters and number boosting rounds chosen, the model was fit to the entire dataset for productionization.
+
+![](/images/lgb_error.png)

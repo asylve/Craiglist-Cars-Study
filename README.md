@@ -9,6 +9,12 @@
   - Found depretiation time constants for the most common vehicle models and manuacturers (ie. which vehicles 'hold their value' the best. Toyota won out here)
   - Produced a geographic distribution of vehicle types in the region (found trucks are more prevalent in the suburbs but SUVs are not)
 
+                        Depreciation Anlysis                            |                 Distribution of vehicle types
+:----------------------------------------------------------------------:|:-----------------------------------------------:
+![corolla_depreciation](/images/corolla_depreciation.png)               |  ![geography_by_type](/images/geography_by_type.png)
+
+ 
+
 # Code/Resources
 
 **Python Version:** 3.8.5  

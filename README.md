@@ -69,3 +69,22 @@ I will include the major graphics and findings from the EDA here. Please see the
 ## 3.1 Price Histogram and Density Functions
 
 ![Price Histogram](/images/price_hist.png)
+
+Price distribution for all of the vehichles. The overall distribution is skewed right, with the most common price being between $3,000-$8,000. Note the dips in price at multiples of $10,000. This indicates a psychological pricing strategy (eg. asking $19,000 instead of $20,000 in hopes that the price will seem lower than it actually is).
+
+![Price Density](/images/price_density.png)
+
+Probability density of price for sedans, SUVs, and Trucks. The curves have been noramlized so the area under each curve is 1. Sedans are the most skewed to the low price end. SUVs and trucks have lower end options (under $10,000) but are also commonly found in the $30,000-$40,000 range. The psychological strategy of pricing just under multiples of $10,000 is more apparent here. This might be a good selling strategy if buyers use the pricing filter on their search with a bands at a round numbers.
+
+Another interesting feature is the dip in trucks between $15,000 and $30,000, this may indicate there is less turnover in trucks for this price. Perhaps this means people are happy with their trucks in this range, so if you find one it could be a good buy. The mean year and odometer reading for trucks in this price range is 2010 and 170,000km, so if you find something this this it might be a good buy.
+
+![Interpolation Contours](/images/pricing_contours_interpolation.png)
+
+![Price Contours](/images/price_contours.png)
+
+![pricing_popular](/images/pricing_popular.png)
+
+
+![corolla_depreciation](/images/corolla_depreciation.png)
+![deprecition_by_manufacturer](/images/deprecition_by_manufacturer.png)
+![geography_by_type](/images/geography_by_type.png)

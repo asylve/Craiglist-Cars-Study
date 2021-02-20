@@ -6,12 +6,12 @@
 - Graphics:
   - Used an interpolation/smoothing teqnique to create contours of price vs odometer reading and age averaged over the entire region
   - Produced price distributions for most common vehicle models. Found that sellers tend to price vehicles just under round multiples of $10,000, likely as a psychological pricing strategy
-  - Found depretiation time constants for the most common vehicle models and manuacturers (ie. which vehicles 'hold their value' the best. Toyota won out here)
-  - Produced a geographic distribution of vehicle types in the region (found trucks are more prevalent in the suburbs but SUVs are not)
+  - Found depretiation time constants (bottom left) for the most common vehicle models and manuacturers (ie. which vehicles 'hold their value' the best)
+  - Produced a geographic distribution of vehicle types in the region (bottom right). Found trucks are more prevalent in the suburbs but SUVs are not.
 
 <p float="left">
-  <img src="/images/corolla_depreciation.png" width="100" />
-  <img src="/images/geography_by_type.png" width="100" /> 
+  <img src="/images/corolla_depreciation.png" width="400" />
+  <img src="/images/geography_by_type.png" width="500" /> 
 </p>
 
 # Code/Resources

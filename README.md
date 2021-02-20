@@ -86,7 +86,7 @@ A contourplot of price vs odometer and year can give a birds-eye view of how veh
 The plots below and to the left show the raw scattered datapoints and three different methods for interpolating into a uniform grid. The 'nearest' was chosen and smoothed using a moving average with a window of 30,000km and 3 years. The result is shown on the contour plot below and to the right.
 
 Odometer reading is much more important than year to determine price. According to this data, a newer vehicle would only loose ~20% ($8,000) of its value after 40 years with no driving. On the other hand, the same vehicle driven 50,000km in one year would lose 20-30% of its value.
-
+                        Interpolated Data                               |                 Smoothed Contour
 :----------------------------------------------------------------------:|:-----------------------------------------------:
 ![Interpolation Contours](/images/pricing_contours_interpolation.png)   |  ![Price Contours](/images/price_contours.png)
 

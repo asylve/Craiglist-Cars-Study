@@ -1,4 +1,4 @@
-# Craiglist Cars in British Columbia
+# Craiglist Cars in British Columbia - Project Summary
 
 - Scraped and cleaned ~37,000 Craiglist vehicle listings from southern British Columbia
 - Trained a gradient boosting model to predict the market price of a listing (MAE $2,300), which can be used to help determine if an asking price is reasonable.

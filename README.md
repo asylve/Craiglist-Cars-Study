@@ -87,22 +87,25 @@ The plots below and to the left show the raw scattered datapoints and three diff
 
 Odometer reading is much more important than year to determine price. According to this data, a newer vehicle would only loose ~20% ($8,000) of its value after 40 years with no driving. On the other hand, the same vehicle driven 50,000km in one year would lose 20-30% of its value.
 
-Solarized dark                                                          |  Solarized Ocean
 :----------------------------------------------------------------------:|:-----------------------------------------------:
-!![Interpolation Contours](/images/pricing_contours_interpolation.png)  |  ![Price Contours](/images/price_contours.png)
-
-
-
-
+![Interpolation Contours](/images/pricing_contours_interpolation.png)   |  ![Price Contours](/images/price_contours.png)
 
 # 3.3 Pricing of the Most Popular Vehicles
 
 ![pricing_popular](/images/pricing_popular.png)
 
 # 3.4 Depreciation of the Most Popular Vehicles
+When buying a car, you are not only interested in the current price, but the future price you might be able to sell it for. Here we will fit a decaying exponential function to individual model of vehicle to quantify the depreciation of that model over time. This will tell us if that model 'holds its value'. Below is the fit for the Toyota Corolla data.
 ![corolla_depreciation](/images/corolla_depreciation.png)
+
+By aggrigating the depreciation time constant for the top 10 vehicles under each manufacturer, we can get an idea of which manufacturers hold their value the best. As shown below Toyotas lead the pack with a median time of about 2.1 years for a vehicle to depreciate 20%. Meanwhile a Dodge would only take 1.5 years to depreciate the same fraction. There is still large variability within manufacturers, so it is likely best to determine the depreciation value for the individual model in question when considering a purchase.
+
 ![deprecition_by_manufacturer](/images/deprecition_by_manufacturer.png)
 
 # 3.5 Geographic Distribution of Vehicles
+
+The plot below shows the distribution of sedan, suv, and truck sales by owner in lower mainland BC (where the heighest concentration of data is located). The top probability density curves show the normalized distribution of each vehicle type over longitude. As expected, distinct peaks in both curves occur around Vancouver/Richmond and Surrey where many sales are located.
+
+Note that sedan and SUVs sales are more highly concentrated in the urban centres and truck sales are more evenly distribued. While it might be intuitive that trucks are more likely to be found in the suburbs, it is intersting to note that SUVs are found in high proportion in the city centres alongside sedans.
 
 ![geography_by_type](/images/geography_by_type.png)

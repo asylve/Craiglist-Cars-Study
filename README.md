@@ -65,7 +65,7 @@ Additional cleaning steps were:
 
 # 3. Exploratory Data Analysis (EDA)
 
-I will include the major graphics and findings from the EDA here. Please see the 'EDA' notebook for all the details.
+Major graphics and findings from the EDA are below. See the 'EDA' notebook for additional details.
 
 ## 3.1 Price Histogram and Density Functions
 
@@ -79,7 +79,7 @@ Probability density of price for sedans, SUVs, and Trucks. The curves have been 
 
 Another interesting feature is the dip in trucks between $15,000 and $30,000, this may indicate there is less turnover in trucks for this price. Perhaps this means people are happy with their trucks in this range, so if you find one it could be a good buy. The mean year and odometer reading for trucks in this price range is 2010 and 170,000km, so if you find something this this it might be a good buy.
 
-# 3.2 Price Distribution by Odometer and Year
+## 3.2 Price Distribution by Odometer and Year
 
 A contourplot of price vs odometer and year can give a birds-eye view of how vehicles depreciate over their lifetime. However generating such as plot is complicated by the noise and sparsity of the pricing data. That is, for a given year and odometer reading, there can be many different prices in the dataset, and the data is not filled in in a nice grid-like fashion. To get around this, the pricing data was first interpolated, then smoothed with a moving average filter.
 
@@ -90,11 +90,11 @@ Odometer reading is much more important than year to determine price. According 
 :----------------------------------------------------------------------:|:-----------------------------------------------:
 ![Interpolation Contours](/images/pricing_contours_interpolation.png)   |  ![Price Contours](/images/price_contours.png)
 
-# 3.3 Pricing of the Most Popular Vehicles
+## 3.3 Pricing of the Most Popular Vehicles
 
 ![pricing_popular](/images/pricing_popular.png)
 
-# 3.4 Depreciation of the Most Popular Vehicles
+## 3.4 Depreciation of the Most Popular Vehicles
 When buying a car, you are not only interested in the current price, but the future price you might be able to sell it for. Here we will fit a decaying exponential function to individual model of vehicle to quantify the depreciation of that model over time. This will tell us if that model 'holds its value'. Below is the fit for the Toyota Corolla data.
 ![corolla_depreciation](/images/corolla_depreciation.png)
 
@@ -102,10 +102,16 @@ By aggrigating the depreciation time constant for the top 10 vehicles under each
 
 ![deprecition_by_manufacturer](/images/deprecition_by_manufacturer.png)
 
-# 3.5 Geographic Distribution of Vehicles
+## 3.5 Geographic Distribution of Vehicles
 
 The plot below shows the distribution of sedan, suv, and truck sales by owner in lower mainland BC (where the heighest concentration of data is located). The top probability density curves show the normalized distribution of each vehicle type over longitude. As expected, distinct peaks in both curves occur around Vancouver/Richmond and Surrey where many sales are located.
 
 Note that sedan and SUVs sales are more highly concentrated in the urban centres and truck sales are more evenly distribued. While it might be intuitive that trucks are more likely to be found in the suburbs, it is intersting to note that SUVs are found in high proportion in the city centres alongside sedans.
 
 ![geography_by_type](/images/geography_by_type.png)
+
+# 4 Model Building
+
+## 4.1 Lasso with Coefficient Interpretation
+
+This is a linear model that imposes a penalty on the size of the linear coefficients

@@ -1,4 +1,4 @@
-# Craiglist Cars Study
+# Craiglist Cars in British Columbia
 
 - Scraped and cleaned ~37,000 Craiglist vehicle listings from southern British Columbia
 - Trained a gradient boosting model to predict the market price of a listing (MAE $2,300), which can be used to help determine if an asking price is reasonable.
@@ -60,4 +60,10 @@ Additional cleaning steps were:
 - Split out the year, make and model of the vehicle into separate columns
 - Split out the newly created model column into a base model and modifiers (many models have modifiers at the end such as 'lxt')
 - Create an 'age' column by subtracting the current year from the 'year' column
-- Create new columns based on if the text body contained words I selected as 'positive' or 'negative'. Also created a column to indicate if the text had few (less than 30) words 
+- Create new columns based on if the text body contained words I selected as 'positive' (ie. 'vintage') or 'negative' (ie. 'torn'). Also created a column to indicate if the text had few (less than 30) words 
+
+# Exploratory Data Analysis (EDA)
+
+I will include the major graphics and findings from the EDA here. Please see the 'EDA' notebook for all the details.
+
+##

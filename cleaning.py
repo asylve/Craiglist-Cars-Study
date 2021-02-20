@@ -94,7 +94,6 @@ cars['model'] = make_cleaned.map(get_third)
 
 ##### text body #####
 #get a column from the body text
-#positive = cars['body text'].str.find('lady').map(lambda x: 0 if x==-1 else 1)
 pos_words = ['lady', 'off road', 'winter', 'lift', 'vintage']
 neg_words = ['crack', 'torn', 'damage', 'leak', 'missing']
 
@@ -167,4 +166,3 @@ cars.fillna(fill_lib, inplace=True) #fill the missing values
 
 #output data
 cars.to_csv('cars_cleaned.csv', index=False)
-

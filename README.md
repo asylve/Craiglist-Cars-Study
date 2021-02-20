@@ -5,8 +5,8 @@
 - Trained a linear model (MAE $6,500) to predict a dollar value for important vehicle features (ie. size, fuel type, manufacturer, odometer, etc.)
 - Graphics:
   - Used an interpolation/smoothing teqnique to create contours of price vs odometer reading and age averaged over the entire region
-  - Price distributions and depretiation time constants for the most common vehicle models and manuacturers (ie. found vehicle values and which vehicles 'hold their value' the best)
-  - Geographic distribution of vehicle types in the region (found trucks are more prevalent in the suburbs but SUVs are not)
+  - Produced price distributions and depretiation time constants for the most common vehicle models and manuacturers (ie. found vehicle values and which vehicles 'hold their value' the best)
+  - Produced a geographic distribution of vehicle types in the region (found trucks are more prevalent in the suburbs but SUVs are not)
 
 # Resources
 

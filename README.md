@@ -11,7 +11,7 @@
 
 <p float="left">
   <img src="/images/corolla_depreciation.png" width="400" />
-  <img src="/images/geography_by_type.png" width="500" /> 
+  <img src="/images/geography_by_type.png" width="600" /> 
 </p>
 
 # Code/Resources

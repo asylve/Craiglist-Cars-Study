@@ -16,7 +16,7 @@ https://www.youtube.com/watch?v=fhi4dOhmW-g&list=PL2zq7klxX5ASFejJj80ob9ZAnBHdz5
 
 https://scikit-learn.org/stable/auto_examples/inspection/plot_linear_model_coefficient_interpretation.html
 
-# Web Scraping
+# 1. Web Scraping
 
 I used the tutorial above as a basis to scrape vehicle listings from Craigslist. I needed to expand on the code a fair bit in order to scrape data from each individual vehicle listing page (as apposed to the search page which displays 120 listings at a time). In the end I was able to extract 16 features from each listing:
 
@@ -37,7 +37,7 @@ I used the tutorial above as a basis to scrape vehicle listings from Craigslist.
 - cylinders (number of cylinders in the vehicles engine)
 - size (ie. full-size, compact)
 
-# Data Cleaning
+# 2. Data Cleaning
 
 About 11% of the scaped data was missing values. The columns with missing values were:
 
@@ -62,9 +62,8 @@ Additional cleaning steps were:
 - Create an 'age' column by subtracting the current year from the 'year' column
 - Create new columns based on if the text body contained words I selected as 'positive' (ie. 'vintage') or 'negative' (ie. 'torn'). Also created a column to indicate if the text had few (less than 30) words 
 
-# Exploratory Data Analysis (EDA)
+# 3. Exploratory Data Analysis (EDA)
 
 I will include the major graphics and findings from the EDA here. Please see the 'EDA' notebook for all the details.
 
-##
-Price Histogram and Density Functions
+## 3.1 Price Histogram and Density Functions

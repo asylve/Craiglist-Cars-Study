@@ -127,7 +127,7 @@ Keep in mind that this linear model is not particularly accurate (MAE $6,500), b
 
 ## 4.2 LightGBM (MAE $2,300)
 
-This tree-based gradient boosting model performed much better than the linear model. Only minor changes to the data were performed before fitting: outliers with a price above $100,000 and odometer above 1,000,000km were droped, and the few rows with missing data were dropped. 
+This tree-based gradient boosting model performed much better than the linear model. Only minor changes to the data were performed before fitting: outliers with a price above $100,000 and odometer above 1,000,000km were droped, and the few rows with missing data were dropped. LightGBM can handle categorical features directly so no encoding was required.
 
 Optimal hyperparameters for the model were found with a cross-validated gridsearch over the entire dataset (sklearn GridSearchCV). Next 20% of the data was held out for validation and training/validation scores were plotted against boosting round iteration. While the training score dropped much lower than the validation score, the validation score at no point started to increase (see below). 
 

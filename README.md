@@ -67,3 +67,5 @@ Additional cleaning steps were:
 I will include the major graphics and findings from the EDA here. Please see the 'EDA' notebook for all the details.
 
 ## 3.1 Price Histogram and Density Functions
+
+![Price Histogram](/images/price_hist.png)

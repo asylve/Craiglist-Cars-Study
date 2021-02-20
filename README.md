@@ -5,7 +5,8 @@
 - Trained a linear model (MAE $6,500) to predict a dollar value for important vehicle features (ie. size, fuel type, manufacturer, odometer, etc.)
 - Graphics:
   - Used an interpolation/smoothing teqnique to create contours of price vs odometer reading and age averaged over the entire region
-  - Produced price distributions and depretiation time constants for the most common vehicle models and manuacturers (ie. found vehicle values and which vehicles 'hold their value' the best)
+  - Produced price distributions for most common vehicle models. Found that sellers tend to price vehicles just under round multiples of $10,000, likely as a psychological pricing strategy
+  - Found depretiation time constants for the most common vehicle models and manuacturers (ie. which vehicles 'hold their value' the best: Toyota )
   - Produced a geographic distribution of vehicle types in the region (found trucks are more prevalent in the suburbs but SUVs are not)
 
 # Resources
@@ -78,13 +79,20 @@ Probability density of price for sedans, SUVs, and Trucks. The curves have been 
 
 Another interesting feature is the dip in trucks between $15,000 and $30,000, this may indicate there is less turnover in trucks for this price. Perhaps this means people are happy with their trucks in this range, so if you find one it could be a good buy. The mean year and odometer reading for trucks in this price range is 2010 and 170,000km, so if you find something this this it might be a good buy.
 
+# 3.2 Price Distribution by Odometer and Year
+
 ![Interpolation Contours](/images/pricing_contours_interpolation.png)
 
 ![Price Contours](/images/price_contours.png)
 
+# 3.3 Pricing of the Most Popular Vehicles
+
 ![pricing_popular](/images/pricing_popular.png)
 
-
+# 3.4 Depreciation of the Most Popular Vehicles
 ![corolla_depreciation](/images/corolla_depreciation.png)
 ![deprecition_by_manufacturer](/images/deprecition_by_manufacturer.png)
+
+# 3.5 Geographic Distribution of Vehicles
+
 ![geography_by_type](/images/geography_by_type.png)

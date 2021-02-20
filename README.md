@@ -81,9 +81,19 @@ Another interesting feature is the dip in trucks between $15,000 and $30,000, th
 
 # 3.2 Price Distribution by Odometer and Year
 
-![Interpolation Contours](/images/pricing_contours_interpolation.png)
+A contourplot of price vs odometer and year can give a birds-eye view of how vehicles depreciate over their lifetime. However generating such as plot is complicated by the noise and sparsity of the pricing data. That is, for a given year and odometer reading, there can be many different prices in the dataset, and the data is not filled in in a nice grid-like fashion. To get around this, the pricing data was first interpolated, then smoothed with a moving average filter.
 
-![Price Contours](/images/price_contours.png)
+The plots below and to the left show the raw scattered datapoints and three different methods for interpolating into a uniform grid. The 'nearest' was chosen and smoothed using a moving average with a window of 30,000km and 3 years. The result is shown on the contour plot below and to the right.
+
+Odometer reading is much more important than year to determine price. According to this data, a newer vehicle would only loose ~20% ($8,000) of its value after 40 years with no driving. On the other hand, the same vehicle driven 50,000km in one year would lose 20-30% of its value.
+
+Solarized dark                                                          |  Solarized Ocean
+:----------------------------------------------------------------------:|:-----------------------------------------------:
+!![Interpolation Contours](/images/pricing_contours_interpolation.png)  |  ![Price Contours](/images/price_contours.png)
+
+
+
+
 
 # 3.3 Pricing of the Most Popular Vehicles
 

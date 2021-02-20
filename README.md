@@ -114,4 +114,12 @@ Note that sedan and SUVs sales are more highly concentrated in the urban centres
 
 ## 4.1 Lasso with Coefficient Interpretation
 
-This is a linear model that imposes a penalty on the size of the linear coefficients
+Lasso is a linear model with an imposed penalty based on the sum of the linear coefficeints. This is useful in dealing with feature co-linearity as some of the coefficents can shrink to zero. The goal for this model was not produce the highest accruacy, but rather produce a set of linear coefficents which can be interpreted as dollar values for a vehicle possessing certain features. 
+
+Only the top 15 most popular brans were considered in this analysis. They are (in order of popuularity): Ford, Toyota, Honda, Chevrolet, Mazda, Nissan, Dodge, BMW, Hyundai, Volkswagen, Mercedes, Kia, Jeep, Audi, and GMC. 
+
+The model results are shown in the plot below, and can be used to get an idea of the value of the given vehicle traits. Values shown are averages over 5 cross-validation data sets repeated 5 times for a total of 25 models. The error bars show the extend of the data with outliers shown as separate dots. Most traits are 'yes/no'. The exceptions are cyilnders ($ per cylinder), age ($ per 5 years), odometer ($ per 25,000 km), and size ($ per step up between: sub-compact, compact, mid-size, full-size)
+
+Keep in mind that this linear model is not particularly accurate (MAE $6,500), but it does capture the general trend of the data.
+
+![](/images/Lasso.png)

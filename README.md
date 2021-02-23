@@ -1,6 +1,6 @@
 # Craiglist Cars in British Columbia - Project Summary
 
-- Scraped and cleaned ~37,000 Craiglist vehicle listings from southern British Columbia
+- Scraped and cleaned ~37,000 Craigslist vehicle listings from southern British Columbia
 - Trained a gradient boosting model to predict the market price of a listing (MAE $2,300), which can be used to help determine if an asking price is reasonable.
 - Trained a linear model (MAE $6,500) to predict a dollar value for important vehicle features (ie. size, fuel type, manufacturer, odometer, etc.) 
   - Predictions indicate that diesel vehicles are worth ~$9,000 more than non-diesel vehicles, and that purchasing a vehicle directly from the owner (as apposed to a dealer) can save ~$2,000 off the asking price.

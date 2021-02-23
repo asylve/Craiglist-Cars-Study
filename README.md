@@ -96,9 +96,10 @@ Odometer reading is much more important than year to determine price. According 
 
 The arrow on the plot indicates the depreciation for a vehicle driven 13,100 km driven per year ([average for British Columbia](https://www.ahainsurance.ca/car-insurance/average-mileage-per-year-canada/#:~:text=According%20to%20Natural%20Resources%20Canada,Canada%20is%20about%2015%2C200%20kilometres.)) for 10 years. This works out to a depreciation rate of $0.20/km.
 
-                        Interpolated Data                               |                 Smoothed Contour
-:----------------------------------------------------------------------:|:-----------------------------------------------:
-![Interpolation Contours](/images/pricing_contours_interpolation.png)   |  ![Price Contours](/images/price_contours.png)
+<p float="left">
+  <img src="/images/pricing_contours_interpolation.png" width="400" /> 
+  <img src="/images/price_contours.png" width="400" /> 
+</p>
 
 ## 3.3 Pricing of the Most Popular Vehicles
 

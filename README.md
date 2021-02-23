@@ -98,7 +98,7 @@ The arrow on the plot indicates the depreciation for a vehicle driven 13,100 km 
 
 <p float="left">
   <img src="/images/pricing_contours_interpolation.png" width="400" /> 
-  <img src="/images/price_contours.png" width="400" /> 
+  <img src="/images/price_contours1.png" width="400" /> 
 </p>
 
 ## 3.3 Pricing of the Most Popular Vehicles

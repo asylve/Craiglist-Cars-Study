@@ -2,12 +2,13 @@
 
 - Scraped and cleaned ~37,000 Craiglist vehicle listings from southern British Columbia
 - Trained a gradient boosting model to predict the market price of a listing (MAE $2,300), which can be used to help determine if an asking price is reasonable.
-- Trained a linear model (MAE $6,500) to predict a dollar value for important vehicle features (ie. size, fuel type, manufacturer, odometer, etc.) The model predictions indicate that diesel vehicles are worth ~$9,000 more than non-diesel vehicles, and that purchasing a vehicle directly from the owner (as apposed to a dealer) can save ~$2,000 off the asking price.
+- Trained a linear model (MAE $6,500) to predict a dollar value for important vehicle features (ie. size, fuel type, manufacturer, odometer, etc.) 
+  - Predictions indicate that diesel vehicles are worth ~$9,000 more than non-diesel vehicles, and that purchasing a vehicle directly from the owner (as apposed to a dealer) can save ~$2,000 off the asking price.
 - Exploratory Data Analysis:
   - Found depretiation time constants for the most common vehicle models and manuacturers (ie. which vehicles 'hold their value' the best). Found Toyota, Honda, and Volkswagen depreciate the slowest, while Dodge, Chevrolet, and Ford depreciate the fastest.
   - Produced a geographic distribution of vehicle types in the region (see below). The distribution of trucks was much flatter thoughout the region with smaller peaks around the urban centres, indicating a strong consumer preference for trucks in the suburbs.  
-  - Used interpolation/smoothing to create average contours of price vs odometer reading and age. This gave a benchmark depreciation of $0.19/km driven for the region.
-  - From price distribution curves, found that sellers tend to price vehicles just under round multiples of $10,000, likely as a psychological pricing strategy
+  - Used interpolation/smoothing to create average contours of price vs odometer reading and age. This gave a benchmark depreciation of $0.20/km driven for the region.
+  - From price distribution curves, found that sellers tend to price vehicles just under round multiples of $10,000, likely as a psychological pricing strategy. 
 
 
 <p float="left">
@@ -92,6 +93,9 @@ A contourplot of price vs odometer and year can give a birds-eye view of how veh
 The plots below and to the left show the raw scattered datapoints and three different methods for interpolating into a uniform grid. The 'nearest' was chosen and smoothed using a moving average with a window of 30,000km and 3 years. The result is shown on the contour plot below and to the right.
 
 Odometer reading is much more important than year to determine price. According to this data, a newer vehicle would only loose ~20% ($8,000) of its value after 40 years with no driving. On the other hand, the same vehicle driven 50,000km in one year would lose 20-30% of its value.
+
+The arrow on the plot indicates the depreciation for a vehicle driven 13,100 km driven per year ([average for British Columbia](https://www.ahainsurance.ca/car-insurance/average-mileage-per-year-canada/#:~:text=According%20to%20Natural%20Resources%20Canada,Canada%20is%20about%2015%2C200%20kilometres.)) for 10 years. This works out to a depreciation rate of $0.20/km.
+
                         Interpolated Data                               |                 Smoothed Contour
 :----------------------------------------------------------------------:|:-----------------------------------------------:
 ![Interpolation Contours](/images/pricing_contours_interpolation.png)   |  ![Price Contours](/images/price_contours.png)

@@ -5,7 +5,7 @@
 - Trained a linear model (MAE $6,500) to predict a dollar value for important vehicle features (ie. size, fuel type, manufacturer, odometer, etc.)
 - Exploratory Data Analysis:
   - Found depretiation time constants for the most common vehicle models and manuacturers (ie. which vehicles 'hold their value' the best). Found Toyota, Honda, and Volkswagen depreciate the slowest, while Dodge, Chevrolet, and Ford depreciate the fastest.
-  - Produced a geographic distribution of vehicle types in the region (see below). The distribution of trucks was much flatter thoughout the region with smaller peaks around the urban centres, indicating a strong consumer preference for trucks in the sububrs.  
+  - Produced a geographic distribution of vehicle types in the region (see below). The distribution of trucks was much flatter thoughout the region with smaller peaks around the urban centres, indicating a strong consumer preference for trucks in the suburbs.  
   - Used interpolation/smoothing to create average contours of price vs odometer reading and age. This gave a benchmark depreciation of $0.19/km driven for the region.
   - From price distribution curves, found that sellers tend to price vehicles just under round multiples of $10,000, likely as a psychological pricing strategy
 

@@ -18,7 +18,7 @@
 # Code/Resources
 
 **Python Version:** 3.8.5  
-**Libraries Used:** bs4, numpy, pandas, matplotlib, seaborn, scipy, geopandas, contextily, geoplot, sklearn, lightgbm  
+**Libraries Used:** bs4, numpy, pandas, matplotlib, seaborn, scipy, geopandas, contextily, geoplot, sklearn, lightgbm (`pip install -r requirements.txt`)
 
 **Craigslist Web Scraping by Riley Predum:** https://towardsdatascience.com/web-scraping-craigslist-a-complete-tutorial-c41cea4f4981  
 **Data Science Project Walkthough by Ken Jee:** https://github.com/PlayingNumbers/ds_salary_proj#data-science-salary-estimator-project-overview  

@@ -11,7 +11,7 @@
 
 
 <p float="left">
-  <img src="/images/geography_by_type.png" width="600" /> 
+  <img src="/images/geography_by_type.png" width="800" /> 
 </p>
 
 # Code/Resources

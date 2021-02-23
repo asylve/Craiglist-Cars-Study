@@ -21,7 +21,7 @@
 **Libraries Used:** bs4, numpy, pandas, matplotlib, seaborn, scipy, geopandas, contextily, geoplot, sklearn, lightgbm  
 
 **Craigslist Web Scraping by Riley Predum:** https://towardsdatascience.com/web-scraping-craigslist-a-complete-tutorial-c41cea4f4981  
-**Data Science Project Walkthough by Ken Jee:** https://github.com/PlayingNumbers/ds_salary_proj#data-science-salary-estimator-project-overview 
+**Data Science Project Walkthough by Ken Jee:** https://github.com/PlayingNumbers/ds_salary_proj#data-science-salary-estimator-project-overview  
 **Linear Coefficient Interpretation:** https://scikit-learn.org/stable/auto_examples/inspection/plot_linear_model_coefficient_interpretation.html  
 
 # 1. Web Scraping
@@ -98,7 +98,7 @@ The arrow on the plot indicates the depreciation for a vehicle driven 13,100 km 
 
 <p float="left">
   <img src="/images/pricing_contours_interpolation.png" width="400" /> 
-  <img src="/images/price_contours.png" width="400" /> 
+  <img src="/images/price_contours1.png" width="400" /> 
 </p>
 
 ## 3.3 Pricing of the Most Popular Vehicles

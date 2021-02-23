@@ -2,7 +2,7 @@
 
 - Scraped and cleaned ~37,000 Craiglist vehicle listings from southern British Columbia
 - Trained a gradient boosting model to predict the market price of a listing (MAE $2,300), which can be used to help determine if an asking price is reasonable.
-- Trained a linear model (MAE $6,500) to predict a dollar value for important vehicle features (ie. size, fuel type, manufacturer, odometer, etc.)
+- Trained a linear model (MAE $6,500) to predict a dollar value for important vehicle features (ie. size, fuel type, manufacturer, odometer, etc.) The model predictions indicate that diesel vehicles are worth ~$9,000 more than non-diesel vehicles, and that purchasing a vehicle directly from the owner (as apposed to a dealer) can save ~$2,000 off the asking price.
 - Exploratory Data Analysis:
   - Found depretiation time constants for the most common vehicle models and manuacturers (ie. which vehicles 'hold their value' the best). Found Toyota, Honda, and Volkswagen depreciate the slowest, while Dodge, Chevrolet, and Ford depreciate the fastest.
   - Produced a geographic distribution of vehicle types in the region (see below). The distribution of trucks was much flatter thoughout the region with smaller peaks around the urban centres, indicating a strong consumer preference for trucks in the suburbs.  

@@ -3,14 +3,14 @@
 - Scraped and cleaned ~37,000 Craiglist vehicle listings from southern British Columbia
 - Trained a gradient boosting model to predict the market price of a listing (MAE $2,300), which can be used to help determine if an asking price is reasonable.
 - Trained a linear model (MAE $6,500) to predict a dollar value for important vehicle features (ie. size, fuel type, manufacturer, odometer, etc.)
-- Graphics:
-  - Used an interpolation/smoothing teqnique to create contours of price vs odometer reading and age averaged over the entire region
-  - Produced price distributions for most common vehicle models. Found that sellers tend to price vehicles just under round multiples of $10,000, likely as a psychological pricing strategy
-  - Found depretiation time constants (bottom left) for the most common vehicle models and manuacturers (ie. which vehicles 'hold their value' the best)
-  - Produced a geographic distribution of vehicle types in the region (bottom right). Found trucks are more prevalent in the suburbs but SUVs are not.
+- Exploratory Data Analysis:
+  - Found depretiation time constants for the most common vehicle models and manuacturers (ie. which vehicles 'hold their value' the best). Found Toyota, Honda, and Volkswagen depreciate the slowest, while Dodge, Chevrolet, and Ford depreciate the fastest.
+  - Produced a geographic distribution of vehicle types in the region (see below). The distribution of trucks was much flatter thoughout the region with smaller peaks around the urban centres, indicating a strong consumer preference for trucks in the sububrs.  
+  - Used interpolation/smoothing to create average contours of price vs odometer reading and age. This gave a benchmark depreciation of $0.19/km driven for the region.
+  - From price distribution curves, found that sellers tend to price vehicles just under round multiples of $10,000, likely as a psychological pricing strategy
+
 
 <p float="left">
-  <img src="/images/corolla_depreciation.png" width="400" />
   <img src="/images/geography_by_type.png" width="600" /> 
 </p>
 

@@ -1,6 +1,6 @@
 # Craiglist Cars in British Columbia - Project Summary
 
-- Scraped and cleaned ~37,000 Craiglist vehicle listings from southern British Columbia
+- Scraped and cleaned ~37,000 Craigslist vehicle listings from southern British Columbia
 - Trained a gradient boosting model to predict the market price of a listing (MAE $2,300), which can be used to help determine if an asking price is reasonable.
 - Trained a linear model (MAE $6,500) to predict a dollar value for important vehicle features (ie. size, fuel type, manufacturer, odometer, etc.) 
   - Predictions indicate that diesel vehicles are worth ~$9,000 more than non-diesel vehicles, and that purchasing a vehicle directly from the owner (as apposed to a dealer) can save ~$2,000 off the asking price.
@@ -18,10 +18,10 @@
 # Code/Resources
 
 **Python Version:** 3.8.5  
-**Libraries Used:** bs4, numpy, pandas, matplotlib, seaborn, scipy, geopandas, contextily, geoplot, sklearn, lightgbm  
+**Libraries Used:** bs4, numpy, pandas, matplotlib, seaborn, scipy, geopandas, contextily, geoplot, sklearn, lightgbm (`pip install -r requirements.txt`)
 
 **Craigslist Web Scraping by Riley Predum:** https://towardsdatascience.com/web-scraping-craigslist-a-complete-tutorial-c41cea4f4981  
-**Data Science Project Walkthough by Ken Jee:** https://github.com/PlayingNumbers/ds_salary_proj#data-science-salary-estimator-project-overview 
+**Data Science Project Walkthough by Ken Jee:** https://github.com/PlayingNumbers/ds_salary_proj#data-science-salary-estimator-project-overview  
 **Linear Coefficient Interpretation:** https://scikit-learn.org/stable/auto_examples/inspection/plot_linear_model_coefficient_interpretation.html  
 
 # 1. Web Scraping
@@ -98,7 +98,7 @@ The arrow on the plot indicates the depreciation for a vehicle driven 13,100 km 
 
 <p float="left">
   <img src="/images/pricing_contours_interpolation.png" width="400" /> 
-  <img src="/images/price_contours.png" width="400" /> 
+  <img src="/images/price_contours1.png" width="400" /> 
 </p>
 
 ## 3.3 Pricing of the Most Popular Vehicles

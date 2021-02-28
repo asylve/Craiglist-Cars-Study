@@ -6,13 +6,17 @@ Created on Wed Jan 27 17:26:51 2021
 """
 
 import pandas as pd
+import pickle
 
 cars = pd.read_csv('cars.csv', index_col=0)
+out = {}#library of output paramters required to clean input to productionized model
+out['columns'] = cars.columns#output the required columns we need in our input data
 
 #filling missing data
+out['od_mean'] = cars['odometer'].mean()
 fill_lib = { #this library specifies how to fill missing values based on column
     'condition':'unknown',
-    'odometer':cars['odometer'].mean(),
+    'odometer':out['od_mean'],
     'paint color':'unknown',
     ' ':'unknown'
 }
@@ -152,8 +156,9 @@ def fill_func(x, m):
 
 for col in fill_mode_cols:
     modes = cars.groupby('model0')[col].agg([pd.Series.mode])
+    out['{}'.format(col)] = modes
     cars[col] = cars.apply(fill_func, args=(modes,), axis=1)
-
+    
 #filling remaining missing data
 fill_lib = { #this library specifies how to fill missing values based on column
     'drive':'unknown',
@@ -166,3 +171,9 @@ cars.fillna(fill_lib, inplace=True) #fill the missing values
 
 #output data
 cars.to_csv('cars_cleaned.csv', index=False)
+
+#output library of cleaning parameters so it can be used to clean in the productionized model
+pkl = {'clean_data': out}
+pickle.dump( pkl, open( 'clean_data' + ".p", "wb" ) )
+
+

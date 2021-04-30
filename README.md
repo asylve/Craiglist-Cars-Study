@@ -1,7 +1,13 @@
 # Craiglist Cars in British Columbia - Project Summary
 
+Thinking of buying or selling a vehicle? Read on. In this project I study the factors affecting vehicle price for cars and trucks in British Columbia. I also develop a live gradient boosting model to predict the market value of any Craigslist post. Try it [here](https://vehicle-price-estimator.herokuapp.com/).
+
+<p float="left">
+  <img src="/images/corolla_depreciation.png" width="800" /> 
+</p>
+
 - Scraped and cleaned ~37,000 Craigslist vehicle listings from southern British Columbia
-- Trained and productionized a gradient boosting model (MAE $2,300) to predict the market value of vehicles posted on Craigslist. Try it [here](https://vehicle-price-estimator.herokuapp.com/).
+- Trained and productionized a gradient boosting model (MAE $2,300) to predict the market value of vehicles posted on Craigslist. 
 - Trained a linear model (MAE $6,500) to predict a dollar value for important vehicle features (ie. size, fuel type, manufacturer, odometer, etc.) 
   - Predictions indicate that diesel vehicles are worth ~$9,000 more than non-diesel vehicles, and that purchasing a vehicle directly from the owner (as apposed to a dealer) can save ~$2,000 off the asking price.
 - Exploratory Data Analysis:
@@ -9,11 +15,6 @@
   - Produced a geographic distribution of vehicle types in the region (see below). The distribution of trucks was much flatter thoughout the region with smaller peaks around the urban centres, indicating a strong consumer preference for trucks in the suburbs.  
   - Used interpolation/smoothing to create average contours of price vs odometer reading and age. This gave a benchmark depreciation of $0.20/km driven for the region.
   - From price distribution curves, found that sellers tend to price vehicles just under round multiples of $10,000, likely as a psychological pricing strategy. 
-
-
-<p float="left">
-  <img src="/images/geography_by_type.png" width="800" /> 
-</p>
 
 # Code/Resources
 
